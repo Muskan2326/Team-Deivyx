@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 320 45% 95%;
+    --foreground: 260 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 15% 25%;
+
+    --primary: 280 60% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 290 45% 85%;
+    --primary-glow: 285 55% 75%;
+
+    --secondary: 320 35% 85%;
+    --secondary-foreground: 260 15% 25%;
+    --secondary-light: 320 25% 90%;
+
+    --muted: 320 20% 92%;
+    --muted-foreground: 260 10% 55%;
+
+    --accent: 250 50% 75%;
+    --accent-foreground: 260 15% 25%;
+    --accent-light: 250 35% 90%;
+
+    /* Beautiful gradients for the beach sunset theme */
+    --gradient-primary: linear-gradient(135deg, hsl(320, 60%, 80%) 0%, hsl(280, 70%, 70%) 50%, hsl(240, 60%, 85%) 100%);
+    --gradient-secondary: linear-gradient(180deg, hsl(320, 45%, 95%) 0%, hsl(280, 35%, 90%) 100%);
+    --gradient-accent: linear-gradient(45deg, hsl(290, 50%, 85%) 0%, hsl(320, 40%, 90%) 100%);
+    --gradient-calm: linear-gradient(135deg, hsl(320, 60%, 88%) 0%, hsl(280, 50%, 85%) 50%, hsl(240, 45%, 90%) 100%);
+    
+    /* Beach sunset background */
+    --gradient-beach: linear-gradient(180deg, 
+      hsl(320, 60%, 85%) 0%,
+      hsl(310, 55%, 80%) 20%, 
+      hsl(300, 50%, 75%) 40%,
+      hsl(290, 45%, 70%) 60%,
+      hsl(280, 50%, 68%) 80%,
+      hsl(270, 55%, 65%) 100%
+    );
+
+    /* Soft shadows */
+    --shadow-soft: 0 4px 20px hsl(280, 40%, 80%, 0.15);
+    --shadow-glow: 0 0 30px hsl(285, 55%, 75%, 0.25);
+    --shadow-card: 0 8px 32px hsl(280, 30%, 70%, 0.1);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 260 25% 8%;
+    --foreground: 320 15% 95%;
+
+    --card: 260 20% 12%;
+    --card-foreground: 320 15% 95%;
+
+    --popover: 260 20% 12%;
+    --popover-foreground: 320 15% 95%;
+
+    --primary: 280 70% 75%;
+    --primary-foreground: 260 25% 8%;
+    --primary-light: 290 50% 60%;
+    --primary-glow: 285 60% 65%;
+
+    --secondary: 270 20% 18%;
+    --secondary-foreground: 320 15% 95%;
+    --secondary-light: 270 15% 25%;
+
+    --muted: 270 15% 15%;
+    --muted-foreground: 280 8% 65%;
+
+    --accent: 250 45% 60%;
+    --accent-foreground: 320 15% 95%;
+    --accent-light: 250 30% 25%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280, 50%, 25%) 0%, hsl(260, 60%, 20%) 50%, hsl(240, 45%, 25%) 100%);
+    --gradient-secondary: linear-gradient(180deg, hsl(270, 25%, 15%) 0%, hsl(280, 20%, 18%) 100%);
+    --gradient-accent: linear-gradient(45deg, hsl(280, 35%, 20%) 0%, hsl(270, 25%, 22%) 100%);
+    --gradient-calm: linear-gradient(135deg, hsl(280, 40%, 18%) 0%, hsl(270, 35%, 20%) 50%, hsl(260, 30%, 22%) 100%);
+    
+    /* Dark beach background */
+    --gradient-beach: linear-gradient(180deg, 
+      hsl(280, 40%, 15%) 0%,
+      hsl(270, 45%, 18%) 20%, 
+      hsl(260, 40%, 20%) 40%,
+      hsl(250, 35%, 22%) 60%,
+      hsl(240, 40%, 20%) 80%,
+      hsl(230, 45%, 18%) 100%
+    );
+
+    /* Dark mode shadows */
+    --shadow-soft: 0 4px 20px hsl(260, 60%, 5%, 0.4);
+    --shadow-glow: 0 0 30px hsl(285, 60%, 40%, 0.2);
+    --shadow-card: 0 8px 32px hsl(260, 50%, 5%, 0.3);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-beach);
+    min-height: 100vh;
+  }
+
+  /* Beach wave background animation */
+  .wave-background {
+    background: var(--gradient-beach);
+    animation: wave-flow 20s ease-in-out infinite;
+  }
+
+  /* Floating particles effect */
+  .floating-particles {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--primary-glow)), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--accent)), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--primary)), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(var(--secondary)), transparent);
+    background-repeat: repeat;
+    background-size: 150px 100px;
+    animation: float-particles 25s linear infinite;
+    opacity: 0.6;
+  }
+
+  /* Custom animations */
+  @keyframes wave-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes float-particles {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(360deg); }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes gentle-pulse {
+    0%, 100% { 
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% { 
+      transform: scale(1.05);
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.02) rotate(1deg); }
+  }
+}
